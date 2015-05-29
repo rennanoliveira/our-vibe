@@ -1,6 +1,12 @@
+API_KEYS = YAML::load_file("/Users/renoliver/Projects/noitesdeinsonia/our_vibe/config/api_keys.yml")[Rails.env]
+
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
+
+  # OmniAuth Stuff
+  config.omniauth :facebook, API_KEYS['facebook']['api_key'], API_KEYS['facebook']['api_secret']
+
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.

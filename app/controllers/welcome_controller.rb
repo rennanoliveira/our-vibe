@@ -5,4 +5,9 @@ class WelcomeController < ApplicationController
 
   end
 
+  # Main logged on page.
+  def home
+
+  end
+
 end
