@@ -34,7 +34,9 @@ group :development, :test do
   gem 'spring'
 end
 
+# Authentication and Authorization
 gem 'devise'
 gem 'omniauth-facebook'
+gem 'omniauth-spotify'
 gem 'omniauth_generator'
 
