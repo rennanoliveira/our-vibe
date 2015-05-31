@@ -1,0 +1,63 @@
+<!-- Main -->
+<header id="top" class="header">
+  <div class="text-vertical-center">
+    <h1>Ourvibe</h1>
+    <h3>Because some songs were built for two.</h3>
+    <br>
+    <%= link_to "Sign Up", "#", :class => "btn btn-light btn-lg"%>
+    <a href="#about" class="btn btn-dark btn-lg">Is this cool?</a>
+  </div>
+</header>
+
+<!-- Footer -->
+<footer id="about" class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>
+          Build a collaborative playlist with your friends using songs from
+          <%= link_to "Spotify", "http://www.spotify.com", :target => "_blank" %>
+          <%= link_to image_tag("newwindow.png"), "http://www.spotify.com", :target => "_blank" %>
+        </h2>
+        <p class="lead">Developed in a few nights of insomnia by
+          <%= link_to "Rennan Oliveira", "https://www.linkedin.com/in/rennanoliveira" %>
+          <%= link_to image_tag("newwindow.png"), "https://www.linkedin.com/in/rennanoliveira", :target => "_blank" %>
+          .</p>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</footer>
+
+<!-- Custom Theme JavaScript -->
+<script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+</script>
