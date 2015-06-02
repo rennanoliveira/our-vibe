@@ -40,3 +40,6 @@ gem 'omniauth-facebook'
 gem 'omniauth-spotify'
 gem 'omniauth_generator'
 
+# CSS stuff
+gem "font-awesome-rails"
+
